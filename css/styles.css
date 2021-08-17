@@ -70,6 +70,10 @@ h3 {
 }
 
 input:checked + .slider {
+  background: #8e919f;
+}
+
+input:not(:checked) + .slider {
   background: linear-gradient(to right, #378fe6, #3eda82);
 }
 
@@ -77,6 +81,7 @@ input:checked + .slider:before {
   -webkit-transform: translateX(26px);
   -ms-transform: translateX(26px);
   transform: translateX(26px);
+  background-color: #fff;
 }
 
 .slider.round {
@@ -130,7 +135,7 @@ header .theme-switch {
   place-items: center;
   border-radius: 4px;
   padding: 26px 36px;
-  width: 250px;
+  width: 300px;
   text-align: center;
   background: var(--color-secondary);
 }
