@@ -3,12 +3,14 @@
 .theme-dark {
   --color-primary: hsl(230, 17%, 14%);
   --color-secondary: hsl(228, 28%, 20%);
+  --color-secondary2: rgb(48, 53, 82);
   --color-accent: hsl(228, 34%, 66%);
   --font-color: hsl(0, 0%, 100%);
 }
 .theme-light {
   --color-primary: hsl(0, 0%, 100%);
-  --color-secondary: hsl(227, 47%, 96%);
+  --color-secondary: hsl(229, 24%, 91%);
+  --color-secondary2: hsl(222, 15%, 83%);
   --color-accent: hsl(228, 12%, 44%);
   --font-color: hsl(230, 17%, 14%);
 }
@@ -26,6 +28,7 @@ body,
 }
 body {
   background: var(--color-primary);
+  transition: background 200ms;
 }
 
 h1,
@@ -143,6 +146,12 @@ header {
     height: 250px;
     text-align: center;
     background: var(--color-secondary);
+    cursor: pointer;
+    @for $i from 1 through 8 {
+      &:nth-child(#{$i}) {
+        transition: background 150ms * $i;
+      }
+    }
     * {
       padding: 8px 0;
     }
@@ -165,6 +174,9 @@ header {
       font-size: 16px;
       text-transform: uppercase;
       font-weight: 100;
+    }
+    &:hover {
+      background: var(--color-secondary2);
     }
   }
   .card1:nth-child(1) {
@@ -206,6 +218,12 @@ header {
       padding: 24px 36px;
       height: 180px;
       background: var(--color-secondary);
+      cursor: pointer;
+      @for $i from 1 through 8 {
+        &:nth-child(#{$i}) {
+          transition: background 100ms * $i;
+        }
+      }
       &--top,
       &--bottom {
         display: flex;
@@ -229,6 +247,9 @@ header {
       img,
       p {
         padding: 0 2.5px;
+      }
+      &:hover {
+        background: var(--color-secondary2);
       }
     }
   }

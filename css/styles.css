@@ -2,13 +2,15 @@
 .theme-dark {
   --color-primary: hsl(230, 17%, 14%);
   --color-secondary: hsl(228, 28%, 20%);
+  --color-secondary2: rgb(48, 53, 82);
   --color-accent: hsl(228, 34%, 66%);
   --font-color: hsl(0, 0%, 100%);
 }
 
 .theme-light {
   --color-primary: hsl(0, 0%, 100%);
-  --color-secondary: hsl(227, 47%, 96%);
+  --color-secondary: hsl(229, 24%, 91%);
+  --color-secondary2: hsl(222, 15%, 83%);
   --color-accent: hsl(228, 12%, 44%);
   --font-color: hsl(230, 17%, 14%);
 }
@@ -24,6 +26,7 @@ body,
 
 body {
   background: var(--color-primary);
+  transition: background 200ms;
 }
 
 h1,
@@ -146,6 +149,31 @@ header .theme-switch {
   height: 250px;
   text-align: center;
   background: var(--color-secondary);
+  cursor: pointer;
+}
+.card__section1 .card1:nth-child(1) {
+  transition: background 150ms;
+}
+.card__section1 .card1:nth-child(2) {
+  transition: background 300ms;
+}
+.card__section1 .card1:nth-child(3) {
+  transition: background 450ms;
+}
+.card__section1 .card1:nth-child(4) {
+  transition: background 600ms;
+}
+.card__section1 .card1:nth-child(5) {
+  transition: background 750ms;
+}
+.card__section1 .card1:nth-child(6) {
+  transition: background 900ms;
+}
+.card__section1 .card1:nth-child(7) {
+  transition: background 1050ms;
+}
+.card__section1 .card1:nth-child(8) {
+  transition: background 1200ms;
 }
 .card__section1 .card1 * {
   padding: 8px 0;
@@ -171,6 +199,9 @@ header .theme-switch {
   font-size: 16px;
   text-transform: uppercase;
   font-weight: 100;
+}
+.card__section1 .card1:hover {
+  background: var(--color-secondary2);
 }
 .card__section1 .card1:nth-child(1) {
   border-top: 3px solid #198ff5;
@@ -208,6 +239,31 @@ header .theme-switch {
   padding: 24px 36px;
   height: 180px;
   background: var(--color-secondary);
+  cursor: pointer;
+}
+.card__section2 .cards .card2:nth-child(1) {
+  transition: background 100ms;
+}
+.card__section2 .cards .card2:nth-child(2) {
+  transition: background 200ms;
+}
+.card__section2 .cards .card2:nth-child(3) {
+  transition: background 300ms;
+}
+.card__section2 .cards .card2:nth-child(4) {
+  transition: background 400ms;
+}
+.card__section2 .cards .card2:nth-child(5) {
+  transition: background 500ms;
+}
+.card__section2 .cards .card2:nth-child(6) {
+  transition: background 600ms;
+}
+.card__section2 .cards .card2:nth-child(7) {
+  transition: background 700ms;
+}
+.card__section2 .cards .card2:nth-child(8) {
+  transition: background 800ms;
 }
 .card__section2 .cards .card2--top, .card__section2 .cards .card2--bottom {
   display: flex;
@@ -231,6 +287,9 @@ header .theme-switch {
 .card__section2 .cards .card2 img,
 .card__section2 .cards .card2 p {
   padding: 0 2.5px;
+}
+.card__section2 .cards .card2:hover {
+  background: var(--color-secondary2);
 }
 
 @media screen and (max-width: 600px) {
