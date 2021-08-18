@@ -28,6 +28,7 @@ body {
 
 h1,
 h2,
+h4,
 p {
   color: var(--font-color);
 }
@@ -160,7 +161,7 @@ header .theme-switch {
 .card__section1 .card1 .user p,
 .card__section1 .card1 .rise-down img,
 .card__section1 .card1 .rise-down p {
-  padding: 0 6px;
+  padding: 0 3px;
 }
 .card__section1 .card1 h2 {
   font-size: 44px;
@@ -188,6 +189,55 @@ header .theme-switch {
 }
 .card__section1 .card1:nth-child(4) {
   border-top: 3px solid #c4032a;
+}
+
+.card__section2 {
+  margin-top: 2.5%;
+}
+.card__section2 .cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 0px 16px;
+  justify-content: center;
+  gap: 12px;
+  padding: 24px 0;
+}
+.card__section2 .cards .card2 {
+  display: grid;
+  border-radius: 4px;
+  padding: 24px 36px;
+  height: 180px;
+  background: var(--color-secondary);
+}
+.card__section2 .cards .card2--top, .card__section2 .cards .card2--bottom {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+}
+.card__section2 .cards .card2 .rise-top,
+.card__section2 .cards .card2 .rise-down {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+}
+.card__section2 .cards .card2 h2 {
+  font-size: 38px;
+}
+.card__section2 .cards .card2 h3 {
+  font-size: 16px;
+}
+.card__section2 .cards .card2 img,
+.card__section2 .cards .card2 p {
+  padding: 0 2.5px;
+}
+
+@media screen and (max-width: 600px) {
+  .theme-switch {
+    justify-content: space-between;
+    width: 100%;
+  }
 }
 
 /*# sourceMappingURL=styles.css.map */
